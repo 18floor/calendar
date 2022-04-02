@@ -2,8 +2,11 @@ import React, {Component} from "react";
 import moment from "moment";
 import 'moment/locale/ru';
 import {nanoid} from "nanoid";
-
+import PropTypes from "prop-types";
 class Calendar extends Component {
+    static propTypes = {
+        date: PropTypes.object.isRequired,
+    }
 
     render() {
         const {date} = this.props;
